@@ -23,18 +23,18 @@ class LabClass05 extends StatelessWidget {
             title: Text("TheFirstApp"),
           ),
           body: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
+            scrollDirection: Axis.vertical,
             child: Container(
-              height: 600,
-              // width: double.infinity,
-              child: Row(
+              //height: 600,
+               width: 600,
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: List.generate(
                   100,
                   (index) => Icon(
                     Icons.star,
-                    color: const Color.fromARGB(255, 154, 151, 151),
+                    color: const Color.fromARGB(255, 227, 19, 19),
                     size: index.toDouble(),
                   ),
                 ),
