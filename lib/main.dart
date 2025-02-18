@@ -4,10 +4,10 @@ void main() {
   runApp(const LabClass05());
 }
 
-/*overflow Handling
-1. SingleChilScrorll View
-2.Expanded
-3.Flexible
+/* Overflow Handling
+1. SingleChildScrollView
+2. Expanded
+3. Flexible
 */
 
 class LabClass05 extends StatelessWidget {
@@ -15,32 +15,65 @@ class LabClass05 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
-        title: "TheFirstApp",
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text("TheFirstApp"),
-          ),
-          body: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Container(
-              //height: 600,
-               width: 600,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: List.generate(
-                  100,
-                  (index) => Icon(
-                    Icons.star,
-                    color: const Color.fromARGB(255, 227, 19, 19),
-                    size: index.toDouble(),
-                  ),
-                ),
-              ),
+      title: "TheFirstApp",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("TheFirstApp"),
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(
+              Icons.star,
+              color: const Color.fromARGB(255, 227, 19, 19),
+              size: 50,
             ),
-          ),
-        ));
+            Icon(
+              Icons.star,
+              color: const Color.fromARGB(255, 15, 29, 183),
+              size: 50,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.star,
+                  color: const Color.fromARGB(255, 227, 19, 19),
+                  size: 26,
+                ),
+                Icon(
+                  Icons.star,
+                  color: const Color.fromARGB(255, 227, 19, 19),
+                  size: 26,
+                ),
+                Column(crossAxisAlignment: CrossAxisAlignment.center,
+                children: [ Icon(
+                  Icons.abc_outlined,
+                  color: const Color.fromARGB(255, 227, 19, 19),
+                  size: 40,
+                ),
+                 Icon(
+                  Icons.safety_check_rounded,
+                  color: const Color.fromARGB(255, 227, 19, 19),
+                  size: 26,
+                ),
+                Row(
+                  children: [
+                     Icon(
+                  Icons.star,
+                  color: const Color.fromARGB(255, 227, 19, 19),
+                  size: 26,
+                ),
+                  ],
+                )
+                
+                ]
+                ,)
+                ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
