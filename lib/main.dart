@@ -20,59 +20,41 @@ class LabClass05 extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("TheFirstApp"),
+          
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Icon(
-              Icons.star,
-              color: const Color.fromARGB(255, 227, 19, 19),
-              size: 50,
-            ),
-            Icon(
-              Icons.star,
-              color: const Color.fromARGB(255, 15, 29, 183),
-              size: 50,
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.star,
-                  color: const Color.fromARGB(255, 227, 19, 19),
-                  size: 26,
-                ),
-                Icon(
-                  Icons.star,
-                  color: const Color.fromARGB(255, 227, 19, 19),
-                  size: 26,
-                ),
-                Column(crossAxisAlignment: CrossAxisAlignment.center,
-                children: [ Icon(
-                  Icons.abc_outlined,
-                  color: const Color.fromARGB(255, 227, 19, 19),
-                  size: 40,
-                ),
-                 Icon(
-                  Icons.safety_check_rounded,
-                  color: const Color.fromARGB(255, 227, 19, 19),
-                  size: 26,
-                ),
-                Row(
-                  children: [
-                     Icon(
-                  Icons.star,
-                  color: const Color.fromARGB(255, 227, 19, 19),
-                  size: 26,
-                ),
-                  ],
-                )
-                
-                ]
-                ,)
+        body:Container(
+          margin: EdgeInsets.all(20),
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("50%off",
+                  style: TextStyle(fontSize: 20),
+                  ),
+                  Icon(Icons.heart_broken,size: 30,)
+
                 ],
-            ),
-          ],
-        ),
+                
+              ),
+             Image(image: AssetImage("Assests/NikeAirMax.webp")),
+             Text("Nike Air Shoes")
+             ,
+             Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("\$450",
+                style: TextStyle(
+                  fontSize: 30
+                ),),
+                Text("\$500",style: TextStyle(
+                  fontSize: 20
+                ),)
+
+              ],
+             )
+            ],
+          ),
+        ) 
       ),
     );
   }
