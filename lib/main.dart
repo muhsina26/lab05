@@ -11,23 +11,40 @@ class LabClass05 extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      title: "Basic Flutter UI",
+      title: "TheFirstApp",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Basic Flutter UI 02"),
+          title: Text("TheFirstApp"),
         ),
-        body: Row(children: [
-          Icon(Icons.shop,
-          size:50,
-          color: Colors.red,),
-          Text("This",style: TextStyle(color: Colors.red,
-          fontSize:20),)
-          ,Text(" is",style: TextStyle(color: Colors.blue,
-          fontSize:50),),
-          Text(" Flutter",style: TextStyle(color: Colors.green,
-          fontSize:25),)
+        body:
+        
+         Row(mainAxisAlignment:MainAxisAlignment.spaceEvenly, children: [
+
+          Icon(Icons.star,
+          color: const Color.fromARGB(255, 154, 151, 151),
+          size: 50,
+          ),
+          Icon(Icons.star,
+          color: const Color.fromARGB(255, 139, 136, 136),
+          size: 50,
+          ),
+          Icon(Icons.star,
+          color: const Color.fromARGB(255, 139, 136, 136),
+          size: 50,
+          ),
+          Icon(Icons.star,
+          color: const Color.fromARGB(255, 139, 136, 136),
+          size: 50,
+          ),
+          Icon(Icons.star_border,
+          color: const Color.fromARGB(255, 139, 136, 136),
+          size: 50,
+          ),
+
+          
 
         ],)
+        
       ),
     );
   }
